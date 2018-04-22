@@ -1,15 +1,17 @@
 {
-  "name": "linebot-php-heroku-framework",
-  "description": "a tiny PHP framework to deploy your linebot on heroku",
-  "repository": "https://github.com/CHY0919/linebot-php-heroku-framework.git",
-  "keywords": ["linebot-php", "LINE"],
+  "name": "linebot_for_TECH_FRESH_2018",
+  "description": "LINE TECH FRESH 2018",
+  "repository": "https://github.com/dppss91102/linebot_for_TECH_FRESH_2018.git",
+  "keywords": ["LineBot-php", "LINE"],
   "env": {
     "LINE_CHANNEL_SECRET": {
       "description": "LINE Channel Secret"
     },
     "LINE_CHANNEL_ACCESSTOKEN": {
-      "description": "LINE Channel Accesstoken(Should issued first)"
+      "description": "LINE Channel Accesstoken(Should be issued first)"
+    },
+    "JSON_URL": {
+      "description": "json storing keywords and reply messages"
     }
-    
   }
 }

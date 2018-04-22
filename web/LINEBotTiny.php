@@ -112,6 +112,22 @@ class LINEBotTiny
         }
     }
 
+    public function getProfile($userId)
+    {	$header = array(
+        'Authorization: Bearer ' . $this->channelAccessToken ."\r\n",
+    );
+        $context = stream_context_create(array(
+            "http" => array(
+                "method" => "GET",
+                "header" => $header,
+            ),
+        ));
+        $url='https://api.line.me/v2/bot/profile/'.urlencode($userId);
+        $response = file_get_contents($url, false, $context);
+        $response = json_decode($response,true);
+        return $response;
+    }
+
     private function sign($body)
     {
         $hash = hash_hmac('sha256', $body, $this->channelSecret, true);
