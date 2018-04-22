@@ -83,7 +83,7 @@ foreach ($client->parseEvents() as $event) {
             $source = $event['source'];
 
             if ($source['type'] == "user"){
-                $username = $client->getProfile($source['userId']['displayName']);
+                $username = $client->getProfile($source['userId'])['displayName'];
                 error_log("message is sent from $username");
             }
 
