@@ -2,16 +2,14 @@
   {
     "memo": "開始對話",
 
-    "about": {
-      "imgUrl": "https://i.imgur.com/slJ0KZ5.png",
-      "actions": [
-        {
-          "type": "message",
-          "label": "開始吧！",
-          "text": "開始"
-        }
-      ]
-    }
+    "imgUrl": "https://i.imgur.com/slJ0KZ5.png",
+    "actions": [
+      {
+        "type": "message",
+        "label": "開始吧！",
+        "text": "開始"
+      }
+    ]
   },
   {
     "memo": "一般介紹",
