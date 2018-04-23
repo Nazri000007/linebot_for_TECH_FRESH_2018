@@ -41,12 +41,12 @@
             "actions": [
               {
                 "type": "message",
-                "label": "生活照",
+                "label": "【生活照】",
                 "text": "照片 生活照"
               },
               {
                 "type": "message",
-                "label": "學士照",
+                "label": "【學士照】",
                 "text": "照片 學士照"
               },
               {
@@ -57,18 +57,18 @@
             ]
           },
           {
-            "title": "《系統專用骰組》",
-            "text": "專屬於特定系統的骰組",
+            "title": "《經歷》",
+            "text": "Larry 會什麼呢？",
             "actions": [
               {
                 "type": "message",
-                "label": "【克蘇魯的呼喚 CoC7th】",
-                "text": "keyWord說明 coc"
+                "label": "【大學部專題】",
+                "text": "經歷 大學部專題"
               },
               {
                 "type": "message",
-                "label": "【PBTA】",
-                "text": "keyWord說明 pbta"
+                "label": "【相關課程】",
+                "text": "經歷 相關課程"
               },
               {
                 "type": "message",
