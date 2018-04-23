@@ -19,9 +19,9 @@
     ]
   },
   {
-    "memo": "一般說明",
+    "memo": "一般介紹",
 
-    "keyword": ["說明"],
+    "keyword": ["介紹"],
 
     "about":
     [
@@ -104,17 +104,17 @@
             "actions": [
               {
                 "type": "message",
-                "label": "【負責】",
+                "label": "【負責？】",
                 "text": "特質 負責"
               },
               {
                 "type": "message",
-                "label": "【可靠】",
+                "label": "【可靠？】",
                 "text": "特質 可靠"
               },
               {
                 "type": "message",
-                "label": "【熱心】",
+                "label": "【熱心？】",
                 "text": "特質 熱心"
               }
             ]
@@ -122,82 +122,8 @@
         ]
       }
     ]
-
   },
-  {
-    "memo": "一般介紹",
 
-    "keyword": ["介紹"],
-
-    "about":
-    [
-      {
-        "type":	"text",
-
-        "text": "就從最基本的介紹開始吧！想知道什麼呢？"
-      },
-      {
-        "type":	"carousel",
-        "altText": "alt",
-        "columns":
-        [
-          {
-            "title": "《照片》",
-            "text": "Larry 長怎樣？",
-            "actions": [
-              {
-                "type": "message",
-                "label": "生活照",
-                "text": "照片 生活照"
-              },
-              {
-                "type": "message",
-                "label": "學士照",
-                "text": "照片 學士照"
-              }
-            ]
-          },
-          {
-            "title": "《經歷》",
-            "text": "Larry 會什麼呢？",
-            "actions": [
-              {
-                "type": "message",
-                "label": "大學部專題",
-                "text": "經歷 大學部專題"
-              },
-              {
-                "type": "message",
-                "label": "相關課程",
-                "text": "經歷 相關課程"
-              }
-            ]
-          },
-          {
-            "title": "《社團》",
-            "text": "Larry 的課外活動",
-            "actions": [
-              {
-                "type": "message",
-                "label": "快樂兒童社",
-                "text": "社團 快樂兒童社"
-              },
-              {
-                "type": "message",
-                "label": "清華之愛社",
-                "text": "社團 清華之愛社"
-              },
-              {
-                "type": "message",
-                "label": "動機系學會",
-                "text": "社團 動機系學會"
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
   {
 	"memo": "生活照",
 
