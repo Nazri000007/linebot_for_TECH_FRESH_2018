@@ -141,7 +141,7 @@
             "action":
               {
                 "type": "uri",
-                "label": "台北Rayark 點擊看ig",
+                "label": "label",
                 "uri": "https://www.instagram.com/p/BHM7hVxhy3a/?taken-by=larry0403"
               }
           },
@@ -150,7 +150,7 @@
             "action":
             {
               "type": "uri",
-              "label": "清華短片比賽佳作！點擊看ig",
+              "label": "label",
               "uri": "https://www.instagram.com/p/BdMIBxNAhqi/?taken-by=larry0403"
             }
           },
@@ -159,7 +159,7 @@
             "action":
             {
               "type": "uri",
-              "label": "蘭嶼的日落 點擊看ig",
+              "label": "label",
               "uri": "https://www.instagram.com/p/BWX8p_pgrGj/?taken-by=larry0403"
             }
           }
