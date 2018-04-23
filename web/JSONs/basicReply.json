@@ -168,6 +168,23 @@
         "type":	"text",
 
         "text": "Larry 跟朋友一起去過好多地方呢！"
+      },
+      {
+        "type": "button",
+        "altText":"輸入：繼續 / 下次再說",
+        "text": "要繼續介紹嗎？",
+        "actions": [
+          {
+            "type": "message",
+            "label": "繼續吧！",
+            "text": "繼續介紹"
+          },
+          {
+            "type": "message",
+            "label": "下次再說",
+            "text": "下次再說"
+          }
+        ]
       }
     ]
   },
@@ -191,7 +208,43 @@
       {
         "type": "button",
         "altText":"輸入：繼續 / 下次再說",
-        "text": "要開始介紹嗎？",
+        "text": "要繼續介紹嗎？",
+        "actions": [
+          {
+            "type": "message",
+            "label": "繼續吧！",
+            "text": "繼續介紹"
+          },
+          {
+            "type": "message",
+            "label": "下次再說",
+            "text": "下次再說"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "memo": "大學部專題",
+
+    "keyword": ["大學部專題"],
+
+    "about":
+    [
+      {
+        "type":	"video",
+        "originalContentUrl": "https://larry-s-bot.azurewebsites.net/MOV_1777.mp4",
+        "previewImageUrl": "https://i.imgur.com/y33j77Nm.jpg"
+      },
+      {
+        "type":	"text",
+
+        "text": "Larry 就快畢業了，但他想要待久一點修完資工輔系！"
+      },
+      {
+        "type": "button",
+        "altText":"輸入：繼續 / 下次再說",
+        "text": "要繼續介紹嗎？",
         "actions": [
           {
             "type": "message",

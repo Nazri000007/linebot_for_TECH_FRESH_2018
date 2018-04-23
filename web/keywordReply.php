@@ -28,6 +28,9 @@ function KeyWordReply($inputStr,$userName) {
                             case 'image':
                                 array_push($replyArr, $builder->img($message['originalContentUrl'], $message['previewImageUrl']));
                                 break;
+                            case 'video':
+                                array_push($replyArr, $builder->video($message['originalContentUrl'], $message['previewImageUrl']));
+                                break;
 					    	case 'carousel':
 				    			array_push($replyArr, $builder->carousel($message['altText'], $message['columns']));
 					    	    break;

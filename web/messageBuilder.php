@@ -29,6 +29,16 @@ class messageBuilder{
         return $message;
     }
 
+    public function video($originalUrl, $previewUrl){
+        error_log("building video message:[url:$originalUrl]");
+        $message = array(
+            'type' => 'image',
+            'originalContentUrl' => $originalUrl,
+            'previewImageUrl' => $previewUrl
+        );
+        return $message;
+    }
+
     public function sticker($packageId, $stickerId){
         error_log("building sticker message: [packageId:$packageId, stickerId:$stickerId]");
         $message = array(
