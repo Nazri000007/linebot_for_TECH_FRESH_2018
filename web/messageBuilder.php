@@ -9,12 +9,6 @@
 //建立複數訊息，的物件
 class messageBuilder{
 
-    public function multi($inputArr){
-        error_log("building multi message: [".print_r($inputArr,true)."]");
-        $message = $inputArr;
-        return $message;
-    }
-
     public function text($inputStr){
         settype($inputStr, "string");
         error_log("building text message:[$inputStr]");
