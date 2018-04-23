@@ -86,6 +86,12 @@ foreach ($client->parseEvents() as $event) {
                     )
                 )
             );
+            $client->replyMessage(
+                array(
+                    'replyToken' => $event['replyToken'],
+                    'messages' => $builder->button($basic[0]['imgUrl'], $basic[0]['text'], $basic[0]['actions'])
+                )
+            );
             break;
 
         default:
