@@ -40,27 +40,30 @@ class messageBuilder{
         return $message;
     }
 
-    public function carousel($columns){
+    public function carousel($altText, $columns){
         error_log("building carousel message");
         $message = array(
-                'type'=> 'carousel',
+            'type'=> 'template',
+            'altText'=> $altText,
+            'template'=> array(
+                'type'=> "carousel",
                 'columns'=> $columns
+            )
         );
         return $message;
     }
 
-    public function button($imgUrl, $text, $actions){
+    public function button($altText, $imgUrl, $text, $actions){
         error_log("building button message");
         $message = array(
+            'type'=> 'template',
+            'altText'=> $altText,
+            'template'=> array(
                 'type'=> 'buttons',
                 'thumbnailImageUrl'=> $imgUrl,
-                "imageAspectRatio"=> "rectangle",
-                "imageSize"=> "cover",
-                "imageBackgroundColor"=> "#FFFFFF",
-                "title"=> "Menu",
                 'text'=> $text,
-                "defaultAction"=> $actions,
                 'actions'=> $actions
+            )
         );
         return $message;
     }

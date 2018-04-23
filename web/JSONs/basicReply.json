@@ -2,6 +2,7 @@
   {
     "memo": "開始對話",
 
+    "altText":"輸入：開始 / 下次再說",
     "imgUrl": "https://i.imgur.com/slJ0KZ5.png",
     "text": "要開始介紹嗎？",
     "actions": [

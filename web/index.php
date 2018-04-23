@@ -71,9 +71,6 @@ foreach ($client->parseEvents() as $event) {
             //get basic replies form json file
             $content = file_get_contents('./JSONs/basicReply.json');
             $basic = json_decode($content, true);
-            error_log($basic[0]['imgUrl']);
-            error_log($basic[0]['text']);
-            error_log(print_r($basic[0]['actions'], true));
 
             $client->replyMessage(
                 array(
@@ -81,15 +78,9 @@ foreach ($client->parseEvents() as $event) {
                     'messages' => Array(
                             $builder->text($username."你好！我是賴念群 Larry 創造的機器人。\n想要多認識 Larry 的話可以問我哦！"),
                             $builder->sticker(3,225),
-                            $builder->text("建議使用手機界面，可以更簡單地選取指令。")
-                            //$builder->button($basic[0]['imgUrl'], $basic[0]['text'], $basic[0]['actions'])
+                            $builder->text("建議使用手機界面，可以更簡單地選取指令。"),
+                            $builder->button($basic[0]['altText'], $basic[0]['imgUrl'], $basic[0]['text'], $basic[0]['actions'])
                     )
-                )
-            );
-            $client->replyMessage(
-                array(
-                    'replyToken' => $event['replyToken'],
-                    'messages' => $builder->button($basic[0]['imgUrl'], $basic[0]['text'], $basic[0]['actions'])
                 )
             );
             break;
