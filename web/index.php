@@ -45,19 +45,19 @@ foreach ($client->parseEvents() as $event) {
                 	error_log("the message was: ".$message['text']);
                 	if($message['text']!="")
                 	{
-                		$client->replyMessage(array(
+                		/*$client->replyMessage(array(
                             'replyToken' => $event['replyToken'],
                             'messages'=> array (
                                 $builder->text("Did you say"),
                                 $builder->text($message['text']."?")
                                 )
                     	    )
-                        );
+                        );*/
                 		$msg = KeyWordReply($message['text'], $username);
                 		error_log(print_r($msg, true));
                         $client->replyMessage(array(
                                 'replyToken' => $event['replyToken'],
-                                'messages'=> $builder->text($message['text']."?")
+                                'messages'=> $msg
                             )
                         );
                 	}
