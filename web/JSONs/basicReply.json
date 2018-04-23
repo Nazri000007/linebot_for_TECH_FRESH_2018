@@ -48,11 +48,6 @@
                 "type": "message",
                 "label": "學士照",
                 "text": "照片 學士照"
-              },
-              {
-                "type": "message",
-                "label": "",
-                "text": ""
               }
             ]
           },
@@ -69,11 +64,6 @@
                 "type": "message",
                 "label": "相關課程",
                 "text": "經歷 相關課程"
-              },
-              {
-                "type": "message",
-                "label": "",
-                "text": ""
               }
             ]
           },
