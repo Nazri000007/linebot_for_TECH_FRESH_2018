@@ -125,6 +125,32 @@
   },
 
   {
+    "memo": "生活照",
+
+    "keyword": ["哈哈"],
+
+    "about":
+    [
+      {
+        "type":	"image_carousel",
+        "altText": "輸入：照片 / 經歷 / 社團 / 個性",
+        "columns":
+        [
+          {
+            "imageUrl": "https://i.imgur.com/deNhyWi.jpg?1",
+            "action":
+              {
+                "type": "message",
+                "label": "【負責？】",
+                "text": "特質 負責"
+              }
+
+          }
+        ]
+      }
+    ]
+  },
+  {
 	"memo": "生活照",
 
 	"keyword": ["生活照"],
