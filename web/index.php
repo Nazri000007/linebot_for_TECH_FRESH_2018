@@ -57,7 +57,7 @@ foreach ($client->parseEvents() as $event) {
                 		error_log(print_r($msg, true));
                         $client->replyMessage(array(
                                 'replyToken' => $event['replyToken'],
-                                'messages'=> $builder->text($message['text']."?")
+                                'messages'=> array($builder->text($message['text']."?"))
                             )
                         );
                 	}
