@@ -43,11 +43,13 @@ foreach ($client->parseEvents() as $event) {
             switch ($message['type']) {
                 case 'text':
                 	error_log("the message was: ".$message['text']);
+                	$msg = KeyWordReply($message['text'], $username);
+                	error_log(print_r($msg,true));
                 	if($message['text']!="")
                 	{
                         $client->replyMessage(array(
                                 'replyToken' => $event['replyToken'],
-                                'messages'=> KeyWordReply($message['text'], $username)
+                                'messages'=> $msg
                             )
                         );
                 	}
