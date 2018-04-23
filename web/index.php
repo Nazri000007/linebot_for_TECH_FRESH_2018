@@ -29,6 +29,7 @@ $builder = new messageBuilder();
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message'://received message
+            error_log("message event");
             $message = $event['message'];
             $source = $event['source'];
 
@@ -59,8 +60,8 @@ foreach ($client->parseEvents() as $event) {
             break;
 
         case 'follow'://added as friend
+            error_log("follow event");
             $source = $event['source'];
-
             //get display name of the user
             if ($source['type'] == "user"){
                 $username = $client->getProfile($source['userId'])['displayName'];
