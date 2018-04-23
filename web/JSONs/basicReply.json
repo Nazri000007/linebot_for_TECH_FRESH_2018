@@ -19,6 +19,93 @@
     ]
   },
   {
+    "memo": "一般說明",
+
+    "Syskey": ["keyWord說明"],
+
+    "about":
+    [
+      {
+        "type":	"text",
+
+        "text":
+        "《keyWord功能一覽》\nkeyWord是為了TRPG的擲骰而設計而成的機器人。目前支援的骰組如下：\n\n【基本】骰組\n【擴充】骰組\n【克蘇魯的呼喚 CoC7th】骰組\n【PBTA】骰組\n\n需要骰組說明請輸入：\n　keyWord說明 {骰組中英文名稱或簡稱}\n\n《附加功能》\n與擲骰無關的附加功能，請輸入：\n　keyWord說明 其他\n\n《關於keyWord與錯誤回報》\n請輸入：\n　關於keyWord說明\n　keyWord錯誤回報說明"
+      },
+      {
+        "type":	"carousel",
+        "altText": "快速選擇按鈕",
+        "columns":
+        [
+          {
+            "title": "《通用骰組》",
+            "text": "基本擲骰與擴充擲骰的說明",
+            "actions": [
+              {
+                "type": "message",
+                "label": "【基本】骰組",
+                "text": "keyWord說明 基本"
+              },
+              {
+                "type": "message",
+                "label": "【擴充】骰組",
+                "text": "keyWord說明 擴充"
+              },
+              {
+                "type": "message",
+                "label": "　",
+                "text": "　"
+              }
+            ]
+          },
+          {
+            "title": "《系統專用骰組》",
+            "text": "專屬於特定系統的骰組",
+            "actions": [
+              {
+                "type": "message",
+                "label": "【克蘇魯的呼喚 CoC7th】",
+                "text": "keyWord說明 coc"
+              },
+              {
+                "type": "message",
+                "label": "【PBTA】",
+                "text": "keyWord說明 pbta"
+              },
+              {
+                "type": "message",
+                "label": "　",
+                "text": "　"
+              }
+            ]
+          },
+          {
+            "title": "《其他功能》",
+            "text": "不屬於擲骰的功能",
+            "actions": [
+              {
+                "type": "message",
+                "label": "【附加功能】",
+                "text": "keyWord說明 其他"
+              },
+              {
+                "type": "message",
+                "label": "【關於keyWord】",
+                "text": "關於keyWord說明"
+              },
+              {
+                "type": "message",
+                "label": "【錯誤回報】",
+                "text": "keyWord錯誤回報說明"
+              }
+            ]
+          }
+        ]
+
+      }
+    ]
+
+  },
+  {
     "memo": "一般介紹",
 
     "keyword": ["介紹"],
