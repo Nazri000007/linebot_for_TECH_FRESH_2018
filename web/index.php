@@ -73,10 +73,9 @@ foreach ($client->parseEvents() as $event) {
             $content = file_get_contents('./JSONs/basicReply.json');
             $basic = json_decode($content, true);
 
-            $client->replyMessage(
-                array(
+            $client->replyMessage(array(
                     'replyToken' => $event['replyToken'],
-                    'messages' => Array(
+                    'messages' => array(
                             $builder->text($username."你好！我是賴念群 Larry 創造的機器人。\n想要多認識 Larry 的話可以問我哦！"),
                             $builder->sticker(3,225),
                             $builder->text("建議使用手機界面，可以更簡單地選取指令。"),
