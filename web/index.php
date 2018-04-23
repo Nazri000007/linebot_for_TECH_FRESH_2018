@@ -53,7 +53,7 @@ foreach ($client->parseEvents() as $event) {
                                 )
                     	    )
                         );
-                		error_log(print_r(KeyWordReply($message['text'], $username)));
+                		error_log(print_r(KeyWordReply($message['text'], $username), true));
                         $client->replyMessage(array(
                                 'replyToken' => $event['replyToken'],
                                 'messages'=> KeyWordReply($message['text'], $username)
