@@ -28,7 +28,7 @@ $builder = new messageBuilder();
 
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
-        case 'message':
+        case 'message'://received message
             $message = $event['message'];
             $source = $event['source'];
 
@@ -57,6 +57,29 @@ foreach ($client->parseEvents() as $event) {
 
             }
             break;
+
+        case 'follow'://added as friend
+            $source = $event['source'];
+
+            //get display name of the user
+            if ($source['type'] == "user"){
+                $username = $client->getProfile($source['userId'])['displayName'];
+                error_log("added as friend by $username");
+            }
+
+            $client->replyMessage(
+                array(
+                    'replyToken' => $event['replyToken'],
+                    'messages' => $builder->multi(Array(
+                        $builder->text("你好！我是賴念群 Larry 創造的機器人。\n想要多認識 Larry 的話可以問我哦！"),
+                        $builder->sticker(3,225),
+                        $builder->text("建議使用手機界面，可以更簡單地選取指令。")
+                        )
+                    )
+                )
+            );
+            break;
+
         default:
             error_log("Unsupporeted event type: " . $event['type']);
             break;
