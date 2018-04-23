@@ -78,28 +78,48 @@
             ]
           },
           {
-            "title": "《其他功能》",
-            "text": "不屬於擲骰的功能",
+            "title": "《社團》",
+            "text": "Larry 的課外活動",
             "actions": [
               {
                 "type": "message",
-                "label": "【附加功能】",
-                "text": "keyWord說明 其他"
+                "label": "【快樂兒童社】",
+                "text": "社團 快樂兒童社"
               },
               {
                 "type": "message",
-                "label": "【關於keyWord】",
-                "text": "關於keyWord說明"
+                "label": "【清華之愛社】",
+                "text": "社團 清華之愛社"
               },
               {
                 "type": "message",
-                "label": "【錯誤回報】",
-                "text": "keyWord錯誤回報說明"
+                "label": "【動機系學會】",
+                "text": "社團 動機系學會"
+              }
+            ]
+          },
+          {
+            "title": "《人格特質》",
+            "text": "Larry 是個怎麼樣的人？",
+            "actions": [
+              {
+                "type": "message",
+                "label": "【負責】",
+                "text": "特質 負責"
+              },
+              {
+                "type": "message",
+                "label": "【可靠】",
+                "text": "特質 可靠"
+              },
+              {
+                "type": "message",
+                "label": "【熱心】",
+                "text": "特質 熱心"
               }
             ]
           }
         ]
-
       }
     ]
 
