@@ -65,7 +65,7 @@ class messageBuilder{
         return $message;
     }
 
-    public function button($altText, $imgUrl, $text, $actions){
+    public function button($altText, $text, $actions, $imgUrl){
         error_log("building button message: [altText:$altText]");
         $message = array(
             'type'=> 'template',

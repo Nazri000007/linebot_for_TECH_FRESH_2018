@@ -34,6 +34,9 @@ function KeyWordReply($inputStr,$userName) {
                             case 'image_carousel':
                                 array_push($replyArr, $builder->image_carousel($message['altText'], $message['columns']));
                                 break;
+                            case 'button':
+                                array_push($replyArr, $builder->button($message['altText'], $message['text'], $message['actions'], null));
+                                break;
 					    }
 				    }
 				

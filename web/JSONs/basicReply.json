@@ -28,7 +28,7 @@
       {
         "type":	"text",
 
-        "text": "就從最基本的介紹開始吧！想知道什麼呢？"
+        "text": "想知道什麼呢？"
       },
       {
         "type":	"carousel",
@@ -163,6 +163,11 @@
             }
           }
         ]
+      },
+      {
+        "type":	"text",
+
+        "text": "Larry 跟朋友一起去過好多地方呢！"
       }
     ]
   },
@@ -177,6 +182,28 @@
         "type":	"image",
         "originalContentUrl": "https://i.imgur.com/kyq8Ui5h.jpg",
         "previewImageUrl": "https://i.imgur.com/kyq8Ui5t.jpg"
+      },
+      {
+        "type":	"text",
+
+        "text": "Larry 就快畢業了，但他想要待久一點修完資工輔系！"
+      },
+      {
+        "type": "button",
+        "altText":"輸入：繼續 / 下次再說",
+        "text": "要開始介紹嗎？",
+        "actions": [
+          {
+            "type": "message",
+            "label": "繼續吧！",
+            "text": "繼續介紹"
+          },
+          {
+            "type": "message",
+            "label": "下次再說",
+            "text": "下次再說"
+          }
+        ]
       }
     ]
   },
