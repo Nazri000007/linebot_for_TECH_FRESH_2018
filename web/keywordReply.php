@@ -29,7 +29,7 @@ function KeyWordReply($inputStr,$userName) {
                                 array_push($replyArr, $builder->img($message['url']));
                                 break;
 					    	case 'carousel':
-				    			array_push($replyArr, $builder->carousel($message['altText'], $message['columns']));
+				    			//array_push($replyArr, $builder->carousel($message['altText'], $message['columns']));
 					    	    break;
                             case 'image_carousel':
                                 //array_push($replyArr, $builder->image_carousel($message['altText'], $message['columns']));
