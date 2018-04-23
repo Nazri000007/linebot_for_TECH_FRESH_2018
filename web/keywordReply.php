@@ -26,7 +26,7 @@ function KeyWordReply($inputStr,$userName) {
 					    		array_push($replyArr, $builder->text($message['text']));
 				    		    break;
                             case 'image':
-                                array_push($replyArr, $builder->img($message['url']));
+                                array_push($replyArr, $builder->img($message['originalContentUrl'], $message['previewImageUrl']));
                                 break;
 					    	case 'carousel':
 				    			array_push($replyArr, $builder->carousel($message['altText'], $message['columns']));
