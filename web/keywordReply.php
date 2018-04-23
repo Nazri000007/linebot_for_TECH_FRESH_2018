@@ -13,57 +13,53 @@ function KeyWordReply($inputStr,$userName) {
 
     $builder = new messageBuilder();
 
-	//功能說明
-	if(stristr($inputStr,'說明') != false){ 
-	foreach($basic as $systems){
-		foreach($systems['keyword'] as $check){
-			if(stristr($inputStr, $check) != false){
-				$replyArr = Array();
+	//begin keywords replying
+	//if(stristr($inputStr,'介紹') != false){
+	    foreach($basic as $systems){
+		    foreach($systems['keyword'] as $check){
+			    if(stristr($inputStr, $check) != false){
+				    $replyArr = Array();
 			
-				foreach($systems['about'] as $message){
-					switch ($message['type']) {
-						case 'text':
-							array_push($replyArr, $builder->text($message['text']));
-						break;
-						
-						case 'carousel':
-							error_log("發現旋轉木馬訊息");
-							array_push($replyArr, $builder->carousel($message['columns']));
-						break;
-						
-					}	
-				
-				
-				}
+				    foreach($systems['about'] as $message){
+				    	switch ($message['type']) {
+				    		case 'text':
+					    		array_push($replyArr, $builder->text($message['text']));
+				    		    break;
+                            case 'image':
+                                array_push($replyArr, $builder->img($message['url']));
+                                break;
+					    	case 'carousel':
+				    			array_push($replyArr, $builder->carousel($message['altText'], $message['columns']));
+					    	    break;
+                            case 'image_carousel':
+                                array_push($replyArr, $builder->image_carousel($message['altText'], $message['columns']));
+                                break;
+					    }
+				    }
 				
 				return $builder->multi($replyArr);
 				break;
-			}
-		}
-	}	
-	}
+			    }
+		    }
+	    }
+	//}
 	
-	
-	
-	//更新日誌與公告，使用外聯檔案
-	//可以是為一個使用外聯檔案的範例
+	//read external file
 	if(stristr($inputStr, '更新與公告') != false) {
 		
 		$file = fopen("https://www.dropbox.com/s/h9m9lfhj8pvlu8k/updated.txt?dl=1", "r");
 		$reply = '';
 
-		//輸出文本中所有的行，直到文件結束為止。
 		while(! feof($file))
 		{
 			$reply =  $reply.fgets($file);
 		}
-		//當讀出文件一行後，就在後面加上 <br> 讓html知道要換行
 		fclose($file);
 		
 		return $builder->text($reply);
 	}
 	
-    /*
+/*
     //幫我選～～
 	if(stristr($inputStr, '選') != false||
 		stristr($inputStr, '決定') != false||
@@ -153,6 +149,6 @@ function SendImg($inputStr,$imgsReplyUrl) {
 			}
 		}
 	}
-	*/
+*/
 	return null;
 }

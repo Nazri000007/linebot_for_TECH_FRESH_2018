@@ -36,7 +36,8 @@ foreach ($client->parseEvents() as $event) {
             if ($source['type'] == "user"){
                 $username = $client->getProfile($source['userId'])['displayName'];
                 error_log("received message sent from $username");
-            }
+            } else
+                $username = "";
 
             //filter message types
             switch ($message['type']) {
@@ -51,6 +52,11 @@ foreach ($client->parseEvents() as $event) {
                                 $builder->text($message['text']."?")
                                 )
                     	    )
+                        );
+                        $client->replyMessage(array(
+                                'replyToken' => $event['replyToken'],
+                                'messages'=> KeyWordReply($message['text'], $username)
+                            )
                         );
                 	}
                     break;

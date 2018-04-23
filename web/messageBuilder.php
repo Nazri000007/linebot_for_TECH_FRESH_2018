@@ -9,6 +9,12 @@
 //建立複數訊息，的物件
 class messageBuilder{
 
+    public function multi($inputArr){
+        error_log("building multi message: [".print_r($inputArr,true)."]");
+        $message = $inputArr;
+        return $message;
+    }
+
     public function text($inputStr){
         settype($inputStr, "string");
         error_log("building text message:[$inputStr]");
@@ -41,7 +47,7 @@ class messageBuilder{
     }
 
     public function carousel($altText, $columns){
-        error_log("building carousel message");
+        error_log("building carousel message: [altText:$altText]");
         $message = array(
             'type'=> 'template',
             'altText'=> $altText,
@@ -53,8 +59,21 @@ class messageBuilder{
         return $message;
     }
 
+    public function image_carousel($altText, $columns){
+        error_log("building carousel message: [altText:$altText]");
+        $message = array(
+            'type'=> 'template',
+            'altText'=> $altText,
+            'template'=> array(
+                'type'=> "image_carousel",
+                'columns'=> $columns
+            )
+        );
+        return $message;
+    }
+
     public function button($altText, $imgUrl, $text, $actions){
-        error_log("building button message");
+        error_log("building button message: [altText:$altText]");
         $message = array(
             'type'=> 'template',
             'altText'=> $altText,

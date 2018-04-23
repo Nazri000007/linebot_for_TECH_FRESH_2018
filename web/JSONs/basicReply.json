@@ -9,7 +9,7 @@
       {
         "type": "message",
         "label": "開始吧！",
-        "text": "開始"
+        "text": "開始介紹"
       },
       {
         "type": "message",
@@ -102,45 +102,43 @@
 
       }
     ]
-
   },
   {
-	"memo": "基本擲骰",
+	"memo": "生活照",
 
-	"keyword": ["normal","basic","基本"],
+	"keyword": ["照片","生活照"],
 	
     "about":
 	[
-		{		
-		"type":	"text",
-		
-		"text":"《基本擲骰說明》\n\n【基本骰組】\n‧擲骰格式：{n*} {x}D{y}\n　變數：x→擲骰數量、y→擲骰骰面、n*→複數擲骰次數\n　* 表示可選、非必須\n\n‧範例：2D6\n　解說：此為「擲兩顆六面骰並加總。」\n\n‧範例：5 3D8\n　解說：此為「擲三顆八面骰並加總，重複五次。」\n\n‧延伸應用：\n　加入四則運算：2D4+1D2、3D6*5\n　真假值判斷：2D6>=6、5 1D6+3>=6"},
-		{
-		"type":	"carousel",
-		"altText": "基本骰組範例",
+      {
+		"type":	"image_carousel",
+		"altText": "各種生活照",
 		"columns":
 			[
 				{
-				"title": "《一般擲骰》",
-				"text": "基本的擲骰功能，可以多加嘗試。",
-				"actions": [
-						{
-						"type": "message",
-						"label": "基本擲骰範例：2D6+1D4",
-						"text": "2D6+1D4 擲兩顆六面骰加一顆四面骰"
-						},
-						{
-						"type": "message",
-						"label": "複數擲骰範例：5 3D8",
-						"text": "5 3D8 擲三顆八面骰，重複五次"
-						},
-						{
-						"type": "message",
-						"label": "真假值判定範例：2D6>=6",
-						"text": "2D6>=6"
-						}
-					]
-				}
+                  "imageUrl":"https://i.imgur.com/deNhyWi.jpg",
+				  "action": {
+						"type": "uri",
+                        "label": "台北遊 @ Rayark Concept",
+						"uri": "https://www.instagram.com/p/BHM7hVxhy3a/?taken-by=larry0403"
+                    }
+				},
+                {
+                  "imageUrl":"https://i.imgur.com/eZwHhIL.jpg",
+                  "action": {
+                    "type": "uri",
+                    "label": "清華短片比賽佳作！",
+                    "uri": "https://www.instagram.com/p/BdMIBxNAhqi/?taken-by=larry0403"
+                  }
+                },
+                  {
+                   "imageUrl":"https://i.imgur.com/A0g6K2J.jpg?1",
+                   "action": {
+                    "type": "uri",
+                    "label": "蘭嶼的日落",
+                    "uri": "https://www.instagram.com/p/BWX8p_pgrGj/?taken-by=larry0403"
+                  }
+                }
 			]
 		}
 	]
