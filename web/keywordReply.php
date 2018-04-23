@@ -43,7 +43,7 @@ function KeyWordReply($inputStr,$userName) {
 		    }
 	    }
 	//}
-	
+	/*
 	//read external file
 	if(stristr($inputStr, '更新與公告') != false) {
 		
@@ -59,7 +59,7 @@ function KeyWordReply($inputStr,$userName) {
 		return $builder->text($reply);
 	}
 	
-/*
+
     //幫我選～～
 	if(stristr($inputStr, '選') != false||
 		stristr($inputStr, '決定') != false||
