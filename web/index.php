@@ -68,13 +68,18 @@ foreach ($client->parseEvents() as $event) {
             } else
                 $username = "";
 
+            //get basic replies form json file
+            $content = file_get_contents('./JSONs/basicReply.json');
+            $basic = json_decode($content, true);
+
             $client->replyMessage(
                 array(
                     'replyToken' => $event['replyToken'],
                     'messages' => $builder->multi(Array(
-                        $builder->text($username."你好！我是賴念群 Larry 創造的機器人。\n想要多認識 Larry 的話可以問我哦！"),
-                        $builder->sticker(3,225),
-                        $builder->text("建議使用手機界面，可以更簡單地選取指令。")
+                            $builder->text($username."你好！我是賴念群 Larry 創造的機器人。\n想要多認識 Larry 的話可以問我哦！"),
+                            $builder->sticker(3,225),
+                            $builder->text("建議使用手機界面，可以更簡單地選取指令。"),
+                            $builder->button($basic[0]['about']['imgUrl'], $basic[0]['about']['actions'])
                         )
                     )
                 )

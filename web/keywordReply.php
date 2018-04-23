@@ -5,18 +5,18 @@ require_once('./messageBuilder.php');
 function KeyWordReply($inputStr,$userName) {
 	$inputStr = strtolower($inputStr);
 
-	//get manual form json file
-	$content = file_get_contents('./JSONs/manual.json');
-
+	//get basic replies form json file
+	$content = file_get_contents('./JSONs/basicReply.json');
 	//replace userName in the file
 	$content = preg_replace("/userName/" , $userName , $content);
-	$manual = json_decode($content, true);
+	$basic = json_decode($content, true);
+
     $builder = new messageBuilder();
 
 	//功能說明
 	if(stristr($inputStr,'說明') != false){ 
-	foreach($manual as $systems){
-		foreach($systems['Syskey'] as $chack){	
+	foreach($basic as $systems){
+		foreach($systems['Key'] as $chack){
 			if(stristr($inputStr, $chack) != false){
 				$replyArr = Array();
 			
@@ -28,7 +28,7 @@ function KeyWordReply($inputStr,$userName) {
 						
 						case 'carousel':
 							error_log("發現旋轉木馬訊息");
-							array_push($replyArr, $builder->carousel($message['altText'],$message['columns']));
+							array_push($replyArr, $builder->carousel($message['columns']));
 						break;
 						
 					}	

@@ -46,15 +46,21 @@ class messageBuilder{
         return $message;
     }
 
-    public function carousel($altText, $columns){
+    public function carousel($columns){
         error_log("building carousel message");
         $message = array(
-            'type'=> "template",
-            'altText'=> $altText,
-            'template'=> array(
                 'type'=> "carousel",
                 'columns'=> $columns
-            )
+        );
+        return $message;
+    }
+
+    public function button($imgUrl, $actions){
+        error_log("building button message");
+        $message = array(
+                'type'=> "buttons",
+                'thumbnailImageUrl'=> $imgUrl,
+                'actions'=> $actions
         );
         return $message;
     }
