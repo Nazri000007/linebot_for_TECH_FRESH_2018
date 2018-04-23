@@ -53,11 +53,15 @@ foreach ($client->parseEvents() as $event) {
                                 )
                     	    )
                         );*/
+                		error_log(print_r(array (
+                            $builder->text("Did you say"),
+                            $builder->text($message['text']."?")
+                        ), true));
                 		$msg = KeyWordReply($message['text'], $username);
                 		error_log(print_r($msg, true));
                         $client->replyMessage(array(
                                 'replyToken' => $event['replyToken'],
-                                'messages'=> array($builder->text($message['text']."?"))
+                                'messages'=> $msg
                             )
                         );
                 	}

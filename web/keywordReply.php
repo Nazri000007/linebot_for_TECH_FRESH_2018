@@ -18,13 +18,12 @@ function KeyWordReply($inputStr,$userName) {
 	    foreach($basic as $systems){
 		    foreach($systems['keyword'] as $check){
 			    if(stristr($inputStr, $check) != false){
-				    $replyArr = Array();
+				    $replyArr = array();
 			
 				    foreach($systems['about'] as $message){
 				    	switch ($message['type']) {
 				    		case 'text':
-                                return $builder->text($message['text']);
-					    		//array_push($replyArr, $builder->text($message['text']));
+					    		array_push($replyArr, $builder->text($message['text']));
 				    		    break;
                             case 'image':
                                 array_push($replyArr, $builder->img($message['url']));
