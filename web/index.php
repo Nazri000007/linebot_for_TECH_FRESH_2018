@@ -71,7 +71,7 @@ foreach ($client->parseEvents() as $event) {
             //get basic replies form json file
             $content = file_get_contents('./JSONs/basicReply.json');
             $basic = json_decode($content, true);
-            error_log($basic);
+            echo($basic);
 
             $client->replyMessage(
                 array(
