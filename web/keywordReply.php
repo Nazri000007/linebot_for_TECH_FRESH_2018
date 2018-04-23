@@ -14,7 +14,7 @@ function KeyWordReply($inputStr,$userName) {
     $builder = new messageBuilder();
 
 	//begin keywords replying
-	if(stristr($inputStr,'介紹') != false){
+	//if(stristr($inputStr,'介紹') != false){
 	    foreach($basic as $systems){
 		    foreach($systems['keyword'] as $check){
 			    if(stristr($inputStr, $check) != false){
@@ -42,7 +42,7 @@ function KeyWordReply($inputStr,$userName) {
 			    }
 		    }
 	    }
-	}
+	//}
 	/*
 	//read external file
 	if(stristr($inputStr, '更新與公告') != false) {
