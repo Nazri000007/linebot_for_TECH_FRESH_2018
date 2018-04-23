@@ -16,8 +16,8 @@ function KeyWordReply($inputStr,$userName) {
 	//功能說明
 	if(stristr($inputStr,'說明') != false){ 
 	foreach($basic as $systems){
-		foreach($systems['Key'] as $chack){
-			if(stristr($inputStr, $chack) != false){
+		foreach($systems['keyword'] as $check){
+			if(stristr($inputStr, $check) != false){
 				$replyArr = Array();
 			
 				foreach($systems['about'] as $message){
