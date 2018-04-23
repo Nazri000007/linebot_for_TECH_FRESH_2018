@@ -54,7 +54,7 @@ class messageBuilder{
     }
 
     public function image_carousel($altText, $columns){
-        error_log("building carousel message: [altText:$altText]");
+        error_log("building image carousel message: [altText:$altText]");
         $message = array(
             'type'=> 'template',
             'altText'=> $altText,
