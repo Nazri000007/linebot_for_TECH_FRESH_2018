@@ -60,7 +60,12 @@ class messageBuilder{
         $message = array(
                 'type'=> 'buttons',
                 'thumbnailImageUrl'=> $imgUrl,
+                "imageAspectRatio"=> "rectangle",
+                "imageSize"=> "cover",
+                "imageBackgroundColor"=> "#FFFFFF",
+                "title"=> "Menu",
                 'text'=> $text,
+                "defaultAction"=> $actions,
                 'actions'=> $actions
         );
         return $message;
