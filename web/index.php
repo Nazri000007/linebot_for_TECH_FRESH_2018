@@ -35,7 +35,7 @@ foreach ($client->parseEvents() as $event) {
             //get display name of the user
             if ($source['type'] == "user"){
                 $username = $client->getProfile($source['userId'])['displayName'];
-                error_log("received message sent from $username");
+                error_log("received message sent by $username");
             } else
                 $username = "";
 

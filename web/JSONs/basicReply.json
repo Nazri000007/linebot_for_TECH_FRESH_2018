@@ -28,12 +28,11 @@
       {
         "type":	"text",
 
-        "text":
-        "《keyWord功能一覽》\nkeyWord是為了TRPG的擲骰而設計而成的機器人。目前支援的骰組如下：\n\n【基本】骰組\n【擴充】骰組\n【克蘇魯的呼喚 CoC7th】骰組\n【PBTA】骰組\n\n需要骰組說明請輸入：\n　keyWord說明 {骰組中英文名稱或簡稱}\n\n《附加功能》\n與擲骰無關的附加功能，請輸入：\n　keyWord說明 其他\n\n《關於keyWord與錯誤回報》\n請輸入：\n　關於keyWord說明\n　keyWord錯誤回報說明"
+        "text": "就從最基本的介紹開始吧！想知道什麼呢？"
       },
       {
         "type":	"carousel",
-        "altText": "快速選擇按鈕",
+        "altText": "輸入：照片 / 經歷 / 社團 / 個性",
         "columns":
         [
           {
