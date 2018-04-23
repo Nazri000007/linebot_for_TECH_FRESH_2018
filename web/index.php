@@ -17,90 +17,41 @@
  */
 
 require_once('./LINEBotTiny.php');
+require_once('./keywordReply.php');
+require_once('./messageBuilder.php');
 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
-$jsonUrl = getenv('JSON_URL');
-
-function buildTextMessage($inputStr){
-    settype($inputStr, "string");
-    error_log(" building text message:[$inputStr]");
-    $message = array
-    (
-        array(
-            'type' => 'text',
-            'text' => $inputStr
-        )
-    );
-    return $message;
-}
-
-function buildImgMessage($inputStr){
-    settype($inputStr, "string");
-    error_log(" building image message:[url:$inputStr]");
-    $message = array
-    (
-        array(
-            'type' => "image",
-            'originalContentUrl' => $inputStr,
-            'previewImageUrl' => $inputStr
-        )
-    );
-    return $message;
-}
-
-function buildStickerMessage($packageId, $stickerId){
-    error_log("building sticker message: [packageId:$packageId, stickerId:$stickerId]");
-    $message = array
-    (
-        array(
-            'type' => "sticker",
-            'packageId' => $packageId,
-            'stickerId' => $stickerId
-        )
-    );
-    return $message;
-}
-
-function buildCarouselMessage($altText, $columns){
-    error_log("building carousel message");
-    $message = array(
-        'type'=> "template",
-        'altText'=> $altText,
-        'template'=> array(
-            'type'=> "carousel",
-            'columns'=> $columns
-        )
-    );
-    return $message;
-}
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
+$builder = new messageBuilder();
+
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
         case 'message':
             $message = $event['message'];
             $source = $event['source'];
 
+            //get display name of the user
             if ($source['type'] == "user"){
                 $username = $client->getProfile($source['userId'])['displayName'];
-                error_log("message is sent from $username");
+                error_log("received message sent from $username");
             }
 
+            //filter message types
             switch ($message['type']) {
                 case 'text':
-                	$m_message = $message['text'];
-                	if($m_message!="")
+                	error_log("the message was: ".$message['text']);
+                	if($message['text']!="")
                 	{
                 		$client->replyMessage(array(
-                        'replyToken' => $event['replyToken'],
-                        'messages' => array(
-                            array(
-                                'type' => 'text',
-                                'text' => $message['text']
-                            )
-                        )
-                    	));
+                            'replyToken' => $event['replyToken'],
+                            'messages'=> array (
+                                $builder->text("Did you say"),
+                                $builder->text($message['text']."?")
+                                )
+                    	    )
+                        );
                 	}
                     break;
 

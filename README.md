@@ -2,6 +2,7 @@
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 #### References   
+[Chatbot 開發指南：使用 LINE Bot PHP SDK 打造問答型聊天機器人](https://www.appcoda.com.tw/line-chatbot-sdk/)   
 [使用PHP+Heroku快速打造Linebot回話機器人](https://www.chy.tw/2017/08/phpherokulinebot.html)   
 [骰子狗：開放原始碼的LINE骰子機器人](https://github.com/retsnimle/TrpgLineBot-php)
 

@@ -9,9 +9,6 @@
     },
     "LINE_CHANNEL_ACCESSTOKEN": {
       "description": "LINE Channel Accesstoken(Should be issued first)"
-    },
-    "JSON_URL": {
-      "description": "json storing keywords and reply messages"
     }
   }
 }
