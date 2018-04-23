@@ -19,13 +19,12 @@ class messageBuilder{
         return $message;
     }
 
-    public function img($inputStr){
-        settype($inputStr, "string");
-        error_log("building image message:[url:$inputStr]");
+    public function img($originalUrl, $previewUrl){
+        error_log("building image message:[url:$originalUrl]");
         $message = array(
             'type' => 'image',
-            'originalContentUrl' => $inputStr,
-            'previewImageUrl' => $inputStr
+            'originalContentUrl' => $originalUrl,
+            'previewImageUrl' => $previewUrl
         );
         return $message;
     }

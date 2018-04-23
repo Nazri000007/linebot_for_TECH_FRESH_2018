@@ -123,11 +123,10 @@
       }
     ]
   },
-
   {
     "memo": "生活照",
 
-    "keyword": ["哈哈"],
+    "keyword": ["生活照","照片"],
 
     "about":
     [
@@ -168,45 +167,18 @@
     ]
   },
   {
-	"memo": "生活照",
+    "memo": "學士照",
 
-	"keyword": ["生活照"],
-	
+    "keyword": ["學士照"],
+
     "about":
-	[
+    [
       {
-		"type":	"image_carousel",
-		"altText": "各種生活照",
-		"columns":
-        [
-          {
-            "imageUrl":"https://i.imgur.com/deNhyWi.jpg?1",
-            "action": {
-              "type": "uri",
-              "label": "台北遊 @ Rayark Concept 點擊看ig",
-              "uri": "https://www.instagram.com/p/BHM7hVxhy3a/?taken-by=larry0403"
-            }
-          },
-          {
-            "imageUrl":"https://i.imgur.com/eZwHhIL.jpg?1",
-            "action": {
-              "type": "uri",
-              "label": "清華短片比賽佳作！點擊看ig",
-              "uri": "https://www.instagram.com/p/BdMIBxNAhqi/?taken-by=larry0403"
-            }
-          },
-          {
-            "imageUrl":"https://i.imgur.com/A0g6K2J.jpg?2",
-            "action": {
-              "type": "uri",
-              "label": "蘭嶼的日落 點擊看ig",
-              "uri": "https://www.instagram.com/p/BWX8p_pgrGj/?taken-by=larry0403"
-            }
-          }
-        ]
+        "type":	"image",
+        "originalContentUrl": "https://i.imgur.com/kyq8Ui5h.jpg",
+        "previewImageUrl": "https://i.imgur.com/kyq8Ui5t.jpg"
       }
-	]
-
+    ]
   },
   {
 	"memo": "擴充擲骰",
