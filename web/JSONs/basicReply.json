@@ -36,18 +36,18 @@
         "columns":
         [
           {
-            "title": "《通用骰組》",
-            "text": "基本擲骰與擴充擲骰的說明",
+            "title": "《照片》",
+            "text": "Larry 長怎樣？",
             "actions": [
               {
                 "type": "message",
-                "label": "【基本】骰組",
-                "text": "keyWord說明 基本"
+                "label": "生活照",
+                "text": "照片 生活照"
               },
               {
                 "type": "message",
-                "label": "【擴充】骰組",
-                "text": "keyWord說明 擴充"
+                "label": "學士照",
+                "text": "照片 學士照"
               },
               {
                 "type": "message",
