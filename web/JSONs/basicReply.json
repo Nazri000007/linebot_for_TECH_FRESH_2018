@@ -32,7 +32,7 @@
       },
       {
         "type":	"carousel",
-        "altText": "輸入：照片 / 經歷 / 社團 / 個性",
+        "altText": "alt",
         "columns":
         [
           {
@@ -89,7 +89,6 @@
             ]
           }
         ]
-
       }
     ]
   },
