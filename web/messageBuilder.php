@@ -29,7 +29,7 @@ class messageBuilder{
         settype($inputStr, "string");
         error_log("building image message:[url:$inputStr]");
         $message = array(
-            'type' => "image",
+            'type' => 'image',
             'originalContentUrl' => $inputStr,
             'previewImageUrl' => $inputStr
         );
@@ -39,7 +39,7 @@ class messageBuilder{
     public function sticker($packageId, $stickerId){
         error_log("building sticker message: [packageId:$packageId, stickerId:$stickerId]");
         $message = array(
-            'type' => "sticker",
+            'type' => 'sticker',
             'packageId' => $packageId,
             'stickerId' => $stickerId
         );
@@ -49,17 +49,18 @@ class messageBuilder{
     public function carousel($columns){
         error_log("building carousel message");
         $message = array(
-                'type'=> "carousel",
+                'type'=> 'carousel',
                 'columns'=> $columns
         );
         return $message;
     }
 
-    public function button($imgUrl, $actions){
+    public function button($imgUrl, $text, $actions){
         error_log("building button message");
         $message = array(
-                'type'=> "buttons",
+                'type'=> 'buttons',
                 'thumbnailImageUrl'=> $imgUrl,
+                'text'=> $text,
                 'actions'=> $actions
         );
         return $message;

@@ -3,11 +3,17 @@
     "memo": "開始對話",
 
     "imgUrl": "https://i.imgur.com/slJ0KZ5.png",
+    "text": "要開始介紹嗎？",
     "actions": [
       {
         "type": "message",
         "label": "開始吧！",
         "text": "開始"
+      },
+      {
+        "type": "message",
+        "label": "下次再說",
+        "text": "下次再說"
       }
     ]
   },

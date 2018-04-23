@@ -81,7 +81,7 @@ foreach ($client->parseEvents() as $event) {
                             $builder->text($username."你好！我是賴念群 Larry 創造的機器人。\n想要多認識 Larry 的話可以問我哦！"),
                             $builder->sticker(3,225),
                             $builder->text("建議使用手機界面，可以更簡單地選取指令。"),
-                            $builder->button($basic[0]['imgUrl'], $basic[0]['actions'])
+                            $builder->button($basic[0]['imgUrl'], $basic[0]['text'], $basic[0]['actions'])
                         )
                     )
                 )
