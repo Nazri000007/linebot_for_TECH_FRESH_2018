@@ -23,7 +23,8 @@ function KeyWordReply($inputStr,$userName) {
 				    foreach($systems['about'] as $message){
 				    	switch ($message['type']) {
 				    		case 'text':
-					    		array_push($replyArr, $builder->text($message['text']));
+                                return $builder->text($message['text']);
+					    		//array_push($replyArr, $builder->text($message['text']));
 				    		    break;
                             case 'image':
                                 array_push($replyArr, $builder->img($message['url']));
