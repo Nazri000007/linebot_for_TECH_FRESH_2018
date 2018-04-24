@@ -54,7 +54,10 @@ foreach ($client->parseEvents() as $event) {
                 	    if ($msg == null){
                             $client->replyMessage(array(
                                     'replyToken' => $event['replyToken'],
-                                    'messages' => $builder->text("抱歉，我不懂你的意思，請使用預設的選單哦！")
+                                    'messages' => array(
+                                        $builder->text("抱歉，我不懂[".$message['text']."]的意思，請您使用預設的選單哦！"),
+                                        $builder->sticker(2,153)
+                                    )
                                 )
                             );
                             error_log("unsupported message: ".$message['text']);
