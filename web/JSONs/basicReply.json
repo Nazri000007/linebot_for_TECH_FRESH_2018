@@ -53,11 +53,6 @@
                 "type": "message",
                 "label": "【學士照】",
                 "text": "照片 學士照"
-              },
-              {
-                "type": "message",
-                "label": "　",
-                "text": "　"
               }
             ]
           },
@@ -74,11 +69,6 @@
                 "type": "message",
                 "label": "【相關課程】",
                 "text": "經歷 相關課程"
-              },
-              {
-                "type": "message",
-                "label": "　",
-                "text": "　"
               }
             ]
           },
@@ -89,17 +79,12 @@
               {
                 "type": "message",
                 "label": "【快樂兒童社】",
-                "text": "社團"
+                "text": "社團簡介"
               },
               {
                 "type": "message",
                 "label": "【清華之愛社】",
-                "text": "社團"
-              },
-              {
-                "type": "message",
-                "label": "　",
-                "text": "　"
+                "text": "社團簡介"
               }
             ]
           },
@@ -111,11 +96,6 @@
                 "type": "message",
                 "label": "【自傳】",
                 "text": "自傳"
-              },
-              {
-                "type": "message",
-                "label": "　",
-                "text": "　"
               },
               {
                 "type": "message",
@@ -480,10 +460,15 @@
   {
     "memo": "社團經歷",
 
-    "keyword": ["社團","快兒","快樂兒童社","清愛","清華之愛社"],
+    "keyword": ["社團簡介"],
 
     "about":
     [
+      {
+        "type":	"text",
+
+        "text": "簡介：兩者皆為服務性社團，一個到偏鄉小學服務，另一個則是到新竹仁愛啟智中心服務。快樂兒童社參加8次假日營、2次夏/冬令營，清華之愛社參加3次志工服務、4次夏/冬令營。每次擔任的職位不盡相同，但目標如一，皆是為了帶給服務對象歡笑，在他們和我們心中都留下難忘的回憶。\n\n可點選圖片連結至對應的粉專哦！"
+      },
       {
         "type": "image_map",
         "baseUrl": "https://i.imgur.com/ztfSa8H.jpg?",
@@ -500,28 +485,8 @@
             }
           },
           {
-            "type": "message",
-            "text": "快樂兒童社簡介：服務性社團，主要到偏鄉小學服務。\n\nLarry 在快樂兒童社參加8次假日營、2次夏/冬令營，似乎特別喜歡小孩字呢！",
-            "area": {
-              "x": 0,
-              "y": 0,
-              "width": 1040,
-              "height": 520
-            }
-          },
-          {
             "type": "uri",
             "linkUri": "https://www.facebook.com/WeLoveHappyChild/?hc_ref=ART12NgAZ_JU1NCDuqbrGM0SMoDMm6HCnS7f2ShVmxGGw0nwNIs2HKNIqmuSHv25Xho",
-            "area": {
-              "x": 0,
-              "y": 520,
-              "width": 1040,
-              "height": 520
-            }
-          },
-          {
-            "type": "message",
-            "text": "清華之愛社簡介：服務性社團，主要是到新竹仁愛啟智中心服務。\n\nLarry 在清華之愛社參加3次志工服務、4次夏/冬令營，在幫助這些身心障礙者的過程中，帶給彼此歡笑與回憶。",
             "area": {
               "x": 0,
               "y": 520,
@@ -565,7 +530,7 @@
       {
         "type":	"text",
 
-        "text": "My interests in computer science started late, but it doesn't diminish my ambition to study in the field. Whenever a project is given to me, I give every bit of my strength to get it done as perfectly as possible, even if I have never learned the needed skills. I consider myself to be a fast learner and a hard worker. Take the courses I'm taking this semester for example, I often manage to get the hang of the assignments before my friends do, and I push myself to do so. After a while, my friends started trusting me to help them spot the bugs in their programs. I believe when I'm faced with a challenge in the internship, I'll be able to conquer it with the same attitude.\n   When it comes to"
+        "text": "    My interests in computer science started late, but it doesn't diminish my ambition to study in the field. Whenever a project is given to me, I give every bit of my strength to get it done as perfectly as possible, even if I have never learned the needed skills. I consider myself to be a fast learner and a hard worker. Take the courses I'm taking this semester for example, I often manage to get the hang of the assignments before my friends do, and I push myself to do so. After a while, my friends started trusting me to help them spot the bugs in their programs. I believe when I'm faced with a challenge in the internship, I'll be able to conquer it with the same attitude.\n   When it comes to..."
       },
       {
         "type":	"text",
