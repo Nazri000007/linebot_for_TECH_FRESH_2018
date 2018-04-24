@@ -103,7 +103,8 @@ foreach ($client->parseEvents() as $event) {
 function linkToUser($channelAccessToken, $userId, $richmenuId) {
     $sh = <<< EOF
     curl -v -X POST https://api.line.me/v2/bot/user/$userId/richmenu/$richmenuId \
-    -H "Authorization: Bearer $channelAccessToken"
+    -H "Authorization: Bearer $channelAccessToken" \
+    -H 'Content-Length: 0'
 EOF;
     $result = json_decode(shell_exec(str_replace('\\', '', str_replace(PHP_EOL, '', $sh))), true);
     if(isset($result['message'])) {
