@@ -37,7 +37,7 @@
       },
       {
         "type":	"carousel",
-        "altText": "輸入：照片 / 經歷 / 社團 / 個性",
+        "altText": "輸入：照片 / 經歷 / 活動 / 履歷",
         "columns":
         [
           {
