@@ -35,6 +35,7 @@ foreach ($client->parseEvents() as $event) {
         $username = $client->getProfile($source['userId'])['displayName'];
     } else
         $username = "";
+
     $client->replyMessage(array(
             'replyToken' => $event['replyToken'],
             'messages'=> $builder->text(linkToUser($channelAccessToken, $username, $richmenuId))
@@ -101,10 +102,8 @@ foreach ($client->parseEvents() as $event) {
 
 function linkToUser($channelAccessToken, $userId, $richmenuId) {
     $sh = <<< EOF
-  curl -X POST \
-  -H 'Authorization: Bearer $channelAccessToken' \
-  -H 'Content-Length: 0' \
-  https://api.line.me/v2/bot/user/$userId/richmenu/$richmenuId
+    curl -v -X POST https://api.line.me/v2/bot/user/$userId/richmenu/$richmenuId \
+    -H "Authorization: Bearer $channelAccessToken"
 EOF;
     $result = json_decode(shell_exec(str_replace('\\', '', str_replace(PHP_EOL, '', $sh))), true);
     if(isset($result['message'])) {
