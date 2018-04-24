@@ -79,7 +79,7 @@ class messageBuilder{
         error_log("building image map message: [altText:$altText]");
         $message = array(
             'type'=> 'imagemap',
-            'baseURL'=> $baseUrl,
+            'baseUrl'=> $baseUrl,
             'altText'=> $altText,
             'baseSize'=> array(
                 'height'=> 1040,
