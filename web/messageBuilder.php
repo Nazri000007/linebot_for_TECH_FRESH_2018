@@ -10,7 +10,6 @@
 class messageBuilder{
 
     public function text($inputStr){
-        settype($inputStr, "string");
         error_log("building text message:[$inputStr]");
         $message = array(
             'type' => 'text',
