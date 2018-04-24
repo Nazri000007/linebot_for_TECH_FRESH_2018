@@ -127,7 +127,7 @@
       },
       {
         "type": "button",
-        "altText":"輸入：繼續 / 下次再說",
+        "altText":"輸入：繼續介紹 / 下次再說",
         "text": "要繼續介紹嗎？",
         "defaultAction": {
           "type": "message",
@@ -197,7 +197,7 @@
       },
       {
         "type": "button",
-        "altText":"輸入：繼續 / 下次再說",
+        "altText":"輸入：繼續介紹 / 下次再說",
         "text": "要繼續介紹嗎？",
         "defaultAction": {
           "type": "message",
@@ -243,7 +243,7 @@
       },
       {
         "type": "button",
-        "altText":"輸入：繼續 / 下次再說",
+        "altText":"輸入：繼續介紹 / 下次再說",
         "text": "要繼續介紹嗎？",
         "defaultAction": {
           "type": "message",
@@ -332,7 +332,7 @@
       },
       {
         "type": "button",
-        "altText":"輸入：課程 / 繼續 / 下次再說",
+        "altText":"輸入：微算機內容 / 繼續介紹 / 下次再說",
         "text": "要繼續介紹嗎？",
         "defaultAction": {
           "type": "message",
@@ -368,7 +368,7 @@
     [
       {
         "type":	"image_carousel",
-        "altText": "輸入：照片 / 經歷 / 社團 / 個性",
+        "altText": "各種app截圖",
         "columns":
         [
           {
@@ -430,7 +430,7 @@
       },
       {
         "type": "button",
-        "altText":"輸入：繼續 / 下次再說",
+        "altText":"輸入：機電整合內容 / 繼續介紹 / 下次再說",
         "text": "要繼續介紹嗎？",
         "defaultAction": {
           "type": "message",
@@ -498,7 +498,7 @@
       },
       {
         "type": "button",
-        "altText":"輸入：繼續 / 下次再說",
+        "altText":"輸入：繼續介紹 / 下次再說",
         "text": "要繼續介紹嗎？",
         "defaultAction": {
           "type": "message",
@@ -544,7 +544,7 @@
       },
       {
         "type": "button",
-        "altText":"輸入：繼續 / 下次再說",
+        "altText":"輸入：繼續介紹 / 下次再說",
         "text": "要繼續介紹嗎？",
         "defaultAction": {
           "type": "message",
@@ -609,7 +609,7 @@
       },
       {
         "type": "button",
-        "altText": "輸入：繼續 / 下次再說",
+        "altText": "輸入：繼續介紹 / 下次再說",
         "text": "要繼續介紹嗎？",
         "defaultAction": {
           "type": "message",
