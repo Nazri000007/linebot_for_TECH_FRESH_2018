@@ -5,6 +5,11 @@
     "altText":"輸入：開始介紹 / 下次再說",
     "imgUrl": "https://i.imgur.com/slJ0KZ5.png?1",
     "text": "要開始介紹嗎？",
+    "defaultAction": {
+      "type": "message",
+      "label": "開始吧！",
+      "text": "開始介紹"
+    },
     "actions": [
       {
         "type": "message",
@@ -84,17 +89,12 @@
               {
                 "type": "message",
                 "label": "【快樂兒童社】",
-                "text": "社團 快樂兒童社"
+                "text": "社團"
               },
               {
                 "type": "message",
                 "label": "【清華之愛社】",
-                "text": "社團 清華之愛社"
-              },
-              {
-                "type": "message",
-                "label": "【動機系學會】",
-                "text": "社團 動機系學會"
+                "text": "社團"
               }
             ]
           },
@@ -144,6 +144,11 @@
         "type": "button",
         "altText":"輸入：繼續 / 下次再說",
         "text": "要繼續介紹嗎？",
+        "defaultAction": {
+          "type": "message",
+          "label": "開始吧！",
+          "text": "開始介紹"
+        },
         "actions": [
           {
             "type": "message",
@@ -168,7 +173,7 @@
     [
       {
         "type":	"image_carousel",
-        "altText": "輸入：照片 / 經歷 / 社團 / 個性",
+        "altText": "各種生活照",
         "columns":
         [
           {
@@ -209,6 +214,11 @@
         "type": "button",
         "altText":"輸入：繼續 / 下次再說",
         "text": "要繼續介紹嗎？",
+        "defaultAction": {
+          "type": "message",
+          "label": "開始吧！",
+          "text": "開始介紹"
+        },
         "actions": [
           {
             "type": "message",
@@ -233,12 +243,12 @@
     [
       {
         "type":	"image",
-        "originalImageUrl": "https://i.imgur.com/Mx6HbIS.jpg",
+        "originalContentUrl": "https://i.imgur.com/Mx6HbIS.jpg",
         "previewImageUrl": "https://i.imgur.com/Mx6HbISm.jpg"
       },
       {
         "type":	"image",
-        "originalImageUrl": "https://i.imgur.com/y33j77N.jpg",
+        "originalContentUrl": "https://i.imgur.com/y33j77N.jpg",
         "previewImageUrl": "https://i.imgur.com/y33j77Nm.jpg"
       },
       {
@@ -250,6 +260,11 @@
         "type": "button",
         "altText":"輸入：繼續 / 下次再說",
         "text": "要繼續介紹嗎？",
+        "defaultAction": {
+          "type": "message",
+          "label": "開始吧！",
+          "text": "開始介紹"
+        },
         "actions": [
           {
             "type": "message",
@@ -322,7 +337,12 @@
     [
       {
         "type":	"image",
-        "originalImageUrl": "https://i.imgur.com/gBs2ITd.jpg?2",
+        "originalContentUrl": "https://i.imgur.com/Mx6HbIS.jpg",
+        "previewImageUrl": "https://i.imgur.com/Mx6HbISm.jpg"
+      },
+      {
+        "type":	"image",
+        "originalContentUrl": "https://i.imgur.com/gBs2ITd.jpg?2",
         "previewImageUrl": "https://i.imgur.com/gBs2ITdm.jpg?2"
       },
       {
@@ -332,9 +352,19 @@
       },
       {
         "type": "button",
-        "altText":"輸入：繼續 / 下次再說",
+        "altText":"輸入：課程 / 繼續 / 下次再說",
         "text": "要繼續介紹嗎？",
+        "defaultAction": {
+          "type": "message",
+          "label": "開始吧！",
+          "text": "開始介紹"
+        },
         "actions": [
+          {
+            "type": "message",
+            "label": "想看另一個課程！！",
+            "text": "課程"
+          },
           {
             "type": "message",
             "label": "繼續吧！",
@@ -416,12 +446,100 @@
       {
         "type":	"text",
 
-        "text": "好奇的話可以點網址下載apk哦！\n\nhttps://drive.google.com/file/d/0B8LXQnF1TC4JZFFqVEdFZjA5Qzg/view?usp=sharing\n註：程式美術版權屬神魔之塔遊戲公司所有，此 app 開發僅作教學用途。"
+        "text": "好奇的話可以點網址下載apk哦！\n\nhttps://drive.google.com/file/d/0B8LXQnF1TC4JZFFqVEdFZjA5Qzg/view?usp=sharing\n註：app 中美術版權屬神魔之塔遊戲公司所有，此 app 開發僅作教學用途。"
       },
       {
         "type": "button",
         "altText":"輸入：繼續 / 下次再說",
         "text": "要繼續介紹嗎？",
+        "defaultAction": {
+          "type": "message",
+          "label": "開始吧！",
+          "text": "開始介紹"
+        },
+        "actions": [
+          {
+            "type": "message",
+            "label": "想看另一個課程！！",
+            "text": "課程"
+          },
+          {
+            "type": "message",
+            "label": "繼續吧！",
+            "text": "繼續介紹"
+          },
+          {
+            "type": "message",
+            "label": "下次再說",
+            "text": "下次再說"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "memo": "社團經歷",
+
+    "keyword": ["社團","快兒","快樂兒童社","清愛","清華之愛社"],
+
+    "about":
+    [
+      {
+        "type": "image_map",
+        "baseUrl": "https://i.imgur.com/ztfSa8H.jpg?",
+        "altText": "快兒社和清愛社粉專",
+        "actions": [
+          {
+            "type": "uri",
+            "linkUri": "https://www.facebook.com/WeLoveHappyChild/?hc_ref=ART12NgAZ_JU1NCDuqbrGM0SMoDMm6HCnS7f2ShVmxGGw0nwNIs2HKNIqmuSHv25Xho",
+            "area": {
+              "x": 0,
+              "y": 0,
+              "width": 1040,
+              "height": 520
+            }
+          },
+          {
+            "type": "message",
+            "text": "快樂兒童社簡介：服務性社團，主要到偏鄉小學服務。\n\nLarry 在快樂兒童社參加8次假日營、2次夏/冬令營，似乎特別喜歡小孩字呢！",
+            "area": {
+              "x": 0,
+              "y": 0,
+              "width": 1040,
+              "height": 520
+            }
+          },
+          {
+            "type": "uri",
+            "linkUri": "https://www.facebook.com/WeLoveHappyChild/?hc_ref=ART12NgAZ_JU1NCDuqbrGM0SMoDMm6HCnS7f2ShVmxGGw0nwNIs2HKNIqmuSHv25Xho",
+            "area": {
+              "x": 0,
+              "y": 520,
+              "width": 1040,
+              "height": 520
+            }
+          },
+          {
+            "type": "message",
+            "text": "清華之愛社簡介：服務性社團，主要是到新竹仁愛啟智中心服務。\n\nLarry 在清華之愛社參加3次志工服務、4次夏/冬令營，在幫助這些身心障礙者的過程中，帶給彼此歡笑與回憶。",
+            "area": {
+              "x": 0,
+              "y": 520,
+              "width": 1040,
+              "height": 520
+            }
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "altText":"輸入：繼續 / 下次再說",
+        "text": "要繼續介紹嗎？",
+        "defaultAction": {
+          "type": "message",
+          "label": "開始吧！",
+          "text": "開始介紹"
+        },
         "actions": [
           {
             "type": "message",

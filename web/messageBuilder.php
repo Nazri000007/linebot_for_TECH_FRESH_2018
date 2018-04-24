@@ -75,6 +75,21 @@ class messageBuilder{
         return $message;
     }
 
+    public function image_map($baseUrl, $altText, $actions){
+        error_log("building image map message: [altText:$altText]");
+        $message = array(
+            'type'=> 'imagemap',
+            'baseURL'=> $baseUrl,
+            'altText'=> $altText,
+            'baseSize'=> array(
+                'height'=> 1040,
+                'width'=> 1040
+            ),
+            'actions'=> $actions
+        );
+        return $message;
+    }
+
     public function button($altText, $text, $actions, $imgUrl){
         error_log("building button message: [altText:$altText]");
         $message = array(
