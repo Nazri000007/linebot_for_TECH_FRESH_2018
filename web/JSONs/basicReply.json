@@ -2,7 +2,7 @@
   {
     "memo": "開始對話",
 
-    "altText":"輸入：開始 / 下次再說",
+    "altText":"輸入：開始介紹 / 下次再說",
     "imgUrl": "https://i.imgur.com/slJ0KZ5.png?1",
     "text": "要開始介紹嗎？",
     "actions": [
@@ -124,6 +124,42 @@
     ]
   },
   {
+    "memo": "學士照",
+
+    "keyword": ["學士照"],
+
+    "about":
+    [
+      {
+        "type":	"image",
+        "originalContentUrl": "https://i.imgur.com/kyq8Ui5h.jpg",
+        "previewImageUrl": "https://i.imgur.com/kyq8Ui5t.jpg"
+      },
+      {
+        "type":	"text",
+
+        "text": "Larry 就快畢業了，但他想要待久一點修完資工輔系！"
+      },
+      {
+        "type": "button",
+        "altText":"輸入：繼續 / 下次再說",
+        "text": "要繼續介紹嗎？",
+        "actions": [
+          {
+            "type": "message",
+            "label": "繼續吧！",
+            "text": "繼續介紹"
+          },
+          {
+            "type": "message",
+            "label": "下次再說",
+            "text": "下次再說"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "memo": "生活照",
 
     "keyword": ["生活照","照片"],
@@ -189,21 +225,26 @@
     ]
   },
   {
-    "memo": "學士照",
+    "memo": "大學部專題",
 
-    "keyword": ["學士照"],
+    "keyword": ["大學部專題"],
 
     "about":
     [
       {
         "type":	"image",
-        "originalContentUrl": "https://i.imgur.com/kyq8Ui5h.jpg",
-        "previewImageUrl": "https://i.imgur.com/kyq8Ui5t.jpg"
+        "originalImageUrl": "https://i.imgur.com/Mx6HbIS.jpg",
+        "previewImageUrl": "https://i.imgur.com/Mx6HbISm.jpg"
+      },
+      {
+        "type":	"image",
+        "originalImageUrl": "https://i.imgur.com/y33j77N.jpg",
+        "previewImageUrl": "https://i.imgur.com/y33j77Nm.jpg"
       },
       {
         "type":	"text",
 
-        "text": "Larry 就快畢業了，但他想要待久一點修完資工輔系！"
+        "text": "簡介：在大三下加入曹哲之助理教授實驗室做專題研究，研究目的以開發3D顯示系統的控制程式為主。\n3D顯示系統在實驗室研發多年，我和我的搭擋因為對寫程式的喜愛加入該團隊，以C語言在 Visual Studio 環境下開發用於Windows 7 桌面應用程式，並在 2017 年底的專題展有初步的成果，可在空間中顯示不受觀看角度限制的立體影像。\n而目前我仍在該團隊持續為了系統的改善做努力。"
       },
       {
         "type": "button",
@@ -225,21 +266,157 @@
     ]
   },
   {
-    "memo": "大學部專題",
+    "memo": "相關課程",
 
-    "keyword": ["大學部專題"],
+    "keyword": ["課程"],
 
     "about":
     [
       {
-        "type":	"video",
-        "originalContentUrl": "https://larry-s-bot.azurewebsites.net/MOV_1777.mp4",
-        "previewImageUrl": "https://i.imgur.com/y33j77Nm.jpg"
+        "type":	"text",
+
+        "text": "Larry 做過的 CS-related 課程專題"
+      },
+      {
+        "type":	"carousel",
+        "altText": "輸入：機電整合 / 微算機",
+        "imageSize": "contain",
+        "columns":
+        [
+          {
+            "thumbnailImageUrl": "https://i.imgur.com/1pCAFdph.png",
+            "imageBackgroundColor": "#000000",
+            "title": "《微算機導論》",
+            "text": "微算機導論課程，期末專題為Android APP",
+            "actions": [
+              {
+                "type": "message",
+                "label": "【查看詳情】",
+                "text": "微算機內容"
+              }
+            ]
+          },
+          {
+            "thumbnailImageUrl": "https://i.imgur.com/gBs2ITdh.jpg?2",
+            "imageBackgroundColor": "#000000",
+            "title": "《機電整合程式設計》",
+            "text": "機電整合程式設計課程，期末專題為機械手臂的控制",
+            "actions": [
+              {
+                "type": "message",
+                "label": "【查看詳情】",
+                "text": "機電整合內容"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "memo": "機電整合",
+
+    "keyword": ["機電整合內容"],
+
+    "about":
+    [
+      {
+        "type":	"image",
+        "originalImageUrl": "https://i.imgur.com/gBs2ITd.jpg?2",
+        "previewImageUrl": "https://i.imgur.com/gBs2ITdm.jpg?2"
       },
       {
         "type":	"text",
 
-        "text": "Larry 就快畢業了，但他想要待久一點修完資工輔系！"
+        "text": "簡介：此為動機系上的進階程設課程，最終目標為開發一CNC機台控制程式，並以三軸晶圓取放機為目標機器。\n在課程中學到如何以模組化的方式撰寫大型程式，並以FIFO在實時與非實時模組間做數據溝通，另外，設計CNC code 的 decoder 也是課程中相當重要的一環，而基於興趣我目前更進一步修習編譯器設計課程。\n最終成功實作教授提出的六大功能，並且在期末的一對一口試獲得教授讚賞與邀請進入教授的新創公司實習。"
+      },
+      {
+        "type": "button",
+        "altText":"輸入：繼續 / 下次再說",
+        "text": "要繼續介紹嗎？",
+        "actions": [
+          {
+            "type": "message",
+            "label": "繼續吧！",
+            "text": "繼續介紹"
+          },
+          {
+            "type": "message",
+            "label": "下次再說",
+            "text": "下次再說"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "memo": "微算機",
+
+    "keyword": ["微算機內容"],
+
+    "about":
+    [
+      {
+        "type":	"image_carousel",
+        "altText": "輸入：照片 / 經歷 / 社團 / 個性",
+        "columns":
+        [
+          {
+            "imageUrl": "https://i.imgur.com/5YU7gvn.jpg",
+            "action":
+            {
+              "type": "message",
+              "label": "主畫面",
+              "text": "　"
+            }
+          },
+          {
+            "imageUrl": "https://i.imgur.com/U08jjiH.jpg",
+            "action":
+            {
+              "type": "message",
+              "label": "抽店家牌畫面",
+              "text": "　"
+            }
+          },
+          {
+            "imageUrl": "https://i.imgur.com/ICmB760.jpg",
+            "action":
+            {
+              "type": "message",
+              "label": "店家牌",
+              "text": "　"
+            }
+          },
+          {
+            "imageUrl": "https://i.imgur.com/4TUYmZA.jpg",
+            "action":
+            {
+              "type": "message",
+              "label": "口袋店家名單",
+              "text": "　"
+            }
+          },
+          {
+            "imageUrl": "https://i.imgur.com/1ifcqj4.jpg",
+            "action":
+            {
+              "type": "message",
+              "label": "黑名單",
+              "text": "　"
+            }
+          }
+        ]
+      },
+      {
+        "type":	"text",
+
+        "text": "簡介：此為微處理器的導論課程，期末專題要求實作一Android app。我與3位同學一組，使用 Android Studio 實作一個餐廳抽牌遊戲，讓學校同學能輕鬆決定午餐要吃什麼，並且得到餐廳地點、簡介等資訊。\n我擔任這次的組長，除了分配下來的各項功能實作以外，最重要的工作為整合組員們的 code、完成各項功能之間的溝通橋樑，最後並自己嘗試以Multithread的方式進行優化。\n這次是我第一次接觸 Android ，是個很棒的學習經驗。"
+      },
+      {
+        "type":	"text",
+
+        "text": "好奇的話可以點網址下載apk哦！\n\nhttps://drive.google.com/file/d/0B8LXQnF1TC4JZFFqVEdFZjA5Qzg/view?usp=sharing\n註：程式美術版權屬神魔之塔遊戲公司所有，此 app 開發僅作教學用途。"
       },
       {
         "type": "button",
