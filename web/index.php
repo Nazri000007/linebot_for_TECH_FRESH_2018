@@ -22,23 +22,31 @@ require_once('./messageBuilder.php');
 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
+$richmenuId = "richmenu-b612fb71fe58728db0f0906fc72f1e72";
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $builder = new messageBuilder();
 
 foreach ($client->parseEvents() as $event) {
+
+    $source = $event['source'];
+    //get display name of the user
+    if ($source['type'] == "user"){
+        $username = $client->getProfile($source['userId'])['displayName'];
+    } else
+        $username = "";
+    $client->replyMessage(array(
+            'replyToken' => $event['replyToken'],
+            'messages'=> $builder->text(linkToUser($channelAccessToken, $username, $richmenuId))
+        )
+    );
+
     switch ($event['type']) {
         case 'message'://received message
             error_log("message event");
             $message = $event['message'];
-            $source = $event['source'];
 
-            //get display name of the user
-            if ($source['type'] == "user"){
-                $username = $client->getProfile($source['userId'])['displayName'];
-                error_log("received message sent by $username");
-            } else
-                $username = "";
+            error_log("received message sent by $username");
 
             //filter message types
             switch ($message['type']) {
@@ -90,3 +98,19 @@ foreach ($client->parseEvents() as $event) {
             break;
     }
 };
+
+function linkToUser($channelAccessToken, $userId, $richmenuId) {
+    $sh = <<< EOF
+  curl -X POST \
+  -H 'Authorization: Bearer $channelAccessToken' \
+  -H 'Content-Length: 0' \
+  https://api.line.me/v2/bot/user/$userId/richmenu/$richmenuId
+EOF;
+    $result = json_decode(shell_exec(str_replace('\\', '', str_replace(PHP_EOL, '', $sh))), true);
+    if(isset($result['message'])) {
+        return $result['message'];
+    }
+    else {
+        return 'success';
+    }
+}

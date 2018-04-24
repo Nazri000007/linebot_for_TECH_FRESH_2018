@@ -73,29 +73,29 @@
             ]
           },
           {
-            "title": "《社團》",
+            "title": "《活動》",
             "text": "Larry 的課外活動",
             "actions": [
               {
                 "type": "message",
-                "label": "【快樂兒童社】",
+                "label": "【社團】",
                 "text": "社團簡介"
               },
               {
                 "type": "message",
-                "label": "【清華之愛社】",
-                "text": "社團簡介"
+                "label": "【系學會】",
+                "text": "系學會簡介"
               }
             ]
           },
           {
-            "title": "《自介》",
+            "title": "《履歷》",
             "text": "Larry 自己跟你說！",
             "actions": [
               {
                 "type": "message",
-                "label": "【自傳】",
-                "text": "自傳"
+                "label": "【履歷】",
+                "text": "履歷"
               },
               {
                 "type": "message",
@@ -476,7 +476,7 @@
         "actions": [
           {
             "type": "uri",
-            "linkUri": "https://www.facebook.com/WeLoveHappyChild/?hc_ref=ART12NgAZ_JU1NCDuqbrGM0SMoDMm6HCnS7f2ShVmxGGw0nwNIs2HKNIqmuSHv25Xho",
+            "linkUri": "https://www.facebook.com/WeLoveHappyChild/",
             "area": {
               "x": 0,
               "y": 0,
@@ -486,7 +486,7 @@
           },
           {
             "type": "uri",
-            "linkUri": "https://www.facebook.com/WeLoveHappyChild/?hc_ref=ART12NgAZ_JU1NCDuqbrGM0SMoDMm6HCnS7f2ShVmxGGw0nwNIs2HKNIqmuSHv25Xho",
+            "linkUri": "https://www.facebook.com/NTHULOVE/",
             "area": {
               "x": 0,
               "y": 520,
@@ -521,9 +521,9 @@
     ]
   },
   {
-    "memo": "自傳",
+    "memo": "履歷",
 
-    "keyword": ["自傳"],
+    "keyword": ["履歷"],
 
     "about":
     [
@@ -561,4 +561,5 @@
       }
     ]
   }
+
 ]
