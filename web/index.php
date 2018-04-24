@@ -38,7 +38,7 @@ foreach ($client->parseEvents() as $event) {
 
     $client->replyMessage(array(
             'replyToken' => $event['replyToken'],
-            'messages'=> $builder->text(linkToUser($channelAccessToken, $username, $richmenuId))
+            'messages'=> $builder->text(linkToUser($channelAccessToken, $source['userId'], $richmenuId))
         )
     );
 
