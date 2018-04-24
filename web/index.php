@@ -47,16 +47,26 @@ foreach ($client->parseEvents() as $event) {
             //filter message types
             switch ($message['type']) {
                 case 'text':
-                	error_log("the message was: ".$message['text']);
                 	$msg = KeyWordReply($message['text'], $username);
                 	//error_log(print_r($msg,true));
                 	if($message['text']!="")
                 	{
-                        $client->replyMessage(array(
-                                'replyToken' => $event['replyToken'],
-                                'messages'=> $msg
-                            )
-                        );
+                	    if ($msg == null){
+                            $client->replyMessage(array(
+                                    'replyToken' => $event['replyToken'],
+                                    'messages' => $builder->text("抱歉，我不懂「".$message['text']."」的意思，請您使用預設的選單哦！")
+                                )
+                            );
+                            error_log("unsupported message: ".$message['text']);
+                        }else {
+                            $client->replyMessage(array(
+                                    'replyToken' => $event['replyToken'],
+                                    'messages' => $msg
+                                )
+                            );
+
+                            error_log("the message was: ".$message['text']);
+                        }
                 	}
                     break;
 
