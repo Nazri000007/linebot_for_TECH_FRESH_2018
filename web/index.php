@@ -22,7 +22,7 @@ require_once('./messageBuilder.php');
 
 $channelAccessToken = getenv('LINE_CHANNEL_ACCESSTOKEN');
 $channelSecret = getenv('LINE_CHANNEL_SECRET');
-$richmenuId = "richmenu-b612fb71fe58728db0f0906fc72f1e72";
+$richmenuId = "richmenu-5c6408345e017060bc67765a757167f2";
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 $builder = new messageBuilder();
@@ -36,11 +36,6 @@ foreach ($client->parseEvents() as $event) {
     } else
         $username = "";
 
-    $client->replyMessage(array(
-            'replyToken' => $event['replyToken'],
-            'messages'=> $builder->text(linkToUser($channelAccessToken, $source['userId'], $richmenuId))
-        )
-    );
 
     switch ($event['type']) {
         case 'message'://received message
@@ -70,6 +65,12 @@ foreach ($client->parseEvents() as $event) {
 
         case 'follow'://added as friend
             error_log("follow event");
+
+            if (linkToUser($channelAccessToken, $source['userId'], $richmenuId) == 'success')
+                error_log("richmenu added successfully for $username");
+            else
+                error_log("adding richmenu failed for $username");
+
             $source = $event['source'];
             //get display name of the user
             if ($source['type'] == "user"){

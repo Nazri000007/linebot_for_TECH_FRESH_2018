@@ -343,7 +343,7 @@
           {
             "type": "message",
             "label": "想看另一個課程！",
-            "text": "課程"
+            "text": "微算機內容"
           },
           {
             "type": "message",
@@ -441,7 +441,7 @@
           {
             "type": "message",
             "label": "想看另一個課程！",
-            "text": "課程"
+            "text": "機電整合內容"
           },
           {
             "type": "message",
@@ -521,6 +521,52 @@
     ]
   },
   {
+    "memo": "系學會經歷",
+
+    "keyword": ["系學會簡介"],
+
+    "about":
+    [
+      {
+        "type":	"image",
+        "originalContentUrl": "https://i.imgur.com/WZNThkH.jpg",
+        "previewImageUrl": "https://i.imgur.com/WZNThkHh.jpg"
+      },
+      {
+        "type":	"image",
+        "originalContentUrl": "https://i.imgur.com/yObdeD3.jpg",
+        "previewImageUrl": "https://i.imgur.com/yObdeD3h.jpg"
+      },
+      {
+        "type":	"text",
+
+        "text": "簡介：大一時獲選隔年動機之夜總籌，開始我的系學會生涯。\n動機之夜為動機系一年一度的學生表演，表演人數動輒60幾人，我與我的搭擋們從表演人員招募到表演當天的所有安排一手包辦。\n另外也曾擔任許多系上營隊的活動股長，如迎新宿營、動機營等，帶領股員有效率地完成各項準備。\n擔任系學會活動長期間舉辦多場大型活動，如卡拉ok比賽、四系聯合耶誕舞會、動機啤酒節等等，現在則擔任畢業代表繼續為同學服務，辦事能力備受同學信任。"
+      },
+      {
+        "type": "button",
+        "altText":"輸入：繼續 / 下次再說",
+        "text": "要繼續介紹嗎？",
+        "defaultAction": {
+          "type": "message",
+          "label": "開始吧！",
+          "text": "開始介紹"
+        },
+        "actions": [
+          {
+            "type": "message",
+            "label": "繼續吧！",
+            "text": "繼續介紹"
+          },
+          {
+            "type": "message",
+            "label": "下次再說",
+            "text": "下次再說"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "memo": "履歷",
 
     "keyword": ["履歷"],
@@ -528,14 +574,38 @@
     "about":
     [
       {
-        "type":	"text",
-
-        "text": "    My interests in computer science started late, but it doesn't diminish my ambition to study in the field. Whenever a project is given to me, I give every bit of my strength to get it done as perfectly as possible, even if I have never learned the needed skills. I consider myself to be a fast learner and a hard worker. Take the courses I'm taking this semester for example, I often manage to get the hang of the assignments before my friends do, and I push myself to do so. After a while, my friends started trusting me to help them spot the bugs in their programs. I believe when I'm faced with a challenge in the internship, I'll be able to conquer it with the same attitude.\n   When it comes to..."
-      },
-      {
-        "type":	"text",
-
-        "text": "請點選連結查看完整檔案。\n\nhttps://365nthu-my.sharepoint.com/:b:/g/personal/103033223_office365_nthu_edu_tw/EQZUFIFGcu1Npb0kAtHTa2UBfNDS9JdDhL0j_rvzujICzw?e=K7qH9g"
+        "type":	"image_carousel",
+        "altText": "履歷截圖們",
+        "columns":
+        [
+          {
+            "imageUrl": "https://i.imgur.com/AOjwjF2.png",
+            "action":
+            {
+              "type": "uri",
+              "label": "點擊看完整檔案",
+              "uri": "https://drive.google.com/file/d/1lPRWMufPmssRjAoeeL5aJM3WL6eKgh-M/view?usp=sharing"
+            }
+          },
+          {
+            "imageUrl": "https://i.imgur.com/bpRQ3kN.png",
+            "action":
+            {
+              "type": "uri",
+              "label": "點擊看完整檔案",
+              "uri": "https://drive.google.com/file/d/1lPRWMufPmssRjAoeeL5aJM3WL6eKgh-M/view?usp=sharing"
+            }
+          },
+          {
+            "imageUrl": "https://i.imgur.com/pF7nE8O.png",
+            "action":
+            {
+              "type": "uri",
+              "label": "點擊看完整檔案",
+              "uri": "https://drive.google.com/file/d/1lPRWMufPmssRjAoeeL5aJM3WL6eKgh-M/view?usp=sharing"
+            }
+          }
+        ]
       },
       {
         "type": "button",
