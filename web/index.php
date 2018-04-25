@@ -60,7 +60,7 @@ foreach ($client->parseEvents() as $event) {
                                     )
                                 )
                             );
-                            error_log("unsupported message: ".$message['text']);
+                            error_log("from $username, unsupported message: ".$message['text']);
                         }else {
                             $client->replyMessage(array(
                                     'replyToken' => $event['replyToken'],
@@ -68,7 +68,7 @@ foreach ($client->parseEvents() as $event) {
                                 )
                             );
 
-                            error_log("the message was: ".$message['text']);
+                            error_log("from $username, message: ".$message['text']);
                         }
                 	}
                     break;
