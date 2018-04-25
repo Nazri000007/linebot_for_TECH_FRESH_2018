@@ -107,6 +107,9 @@ foreach ($client->parseEvents() as $event) {
                 )
             );
             break;
+        case 'unfollow'://blocked
+            error_log("unfollowed by $username");
+            break;
 
         default:
             error_log("Unsupporeted event type: " . $event['type']);
