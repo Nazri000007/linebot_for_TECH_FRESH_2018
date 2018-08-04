@@ -42,7 +42,7 @@
         [
           {
             "title": "《照片》",
-            "text": "Larry 長怎樣？",
+            "text": "Nazri 長怎樣？",
             "actions": [
               {
                 "type": "message",
@@ -58,7 +58,7 @@
           },
           {
             "title": "《經歷》",
-            "text": "Larry 會什麼呢？",
+            "text": "Nazri 會什麼呢？",
             "actions": [
               {
                 "type": "message",
@@ -74,7 +74,7 @@
           },
           {
             "title": "《活動》",
-            "text": "Larry 的課外活動",
+            "text": "Nazri 的課外活動",
             "actions": [
               {
                 "type": "message",
@@ -90,7 +90,7 @@
           },
           {
             "title": "《履歷》",
-            "text": "Larry 自己跟你說！",
+            "text": "Nazri 自己跟你說！",
             "actions": [
               {
                 "type": "message",
@@ -123,7 +123,7 @@
       {
         "type":	"text",
 
-        "text": "Larry 就快畢業了，但他想要待久一點修完資工輔系！"
+        "text": "Nazri 就快畢業了，但他想要待久一點修完資工輔系！"
       },
       {
         "type": "button",
@@ -167,7 +167,7 @@
               {
                 "type": "uri",
                 "label": "點擊看貼文",
-                "uri": "https://www.instagram.com/p/BHM7hVxhy3a/?taken-by=larry0403"
+                "uri": "https://www.instagram.com/p/Bl9pEurA_kd/?taken-by=nazri000007"
               }
           },
           {
@@ -176,7 +176,7 @@
             {
               "type": "uri",
               "label": "點擊看貼文",
-              "uri": "https://www.instagram.com/p/BdMIBxNAhqi/?taken-by=larry0403"
+              "uri": "https://www.instagram.com/p/Bl8Bpw3AYXR/?taken-by=nazri000007"
             }
           },
           {
@@ -185,7 +185,7 @@
             {
               "type": "uri",
               "label": "點擊看貼文",
-              "uri": "https://www.instagram.com/p/BWX8p_pgrGj/?taken-by=larry0403"
+              "uri": "https://www.instagram.com/p/Bl6k19-A7iK/?taken-by=nazri000007"
             }
           }
         ]
@@ -193,7 +193,7 @@
       {
         "type":	"text",
 
-        "text": "Larry 跟朋友一起去過好多地方呢！"
+        "text": "Nazri 跟朋友一起去過好多地方呢！"
       },
       {
         "type": "button",
@@ -640,7 +640,7 @@
       {
         "type":	"text",
 
-        "text": "那今天就這樣吧！\n\n之後還想知道更多的話，點選下方『點擊顯示選單』，即可重新開始介紹，也可以連結到此 linebot 的 github 和 Larry 的履歷！\nBye bye!"
+        "text": "那今天就這樣吧！\n\n之後還想知道更多的話，點選下方『點擊顯示選單』，即可重新開始介紹，也可以連結到此 linebot 的 github 和 Nazri000007 的履歷！\nBye bye!"
       }
     ]
   }
